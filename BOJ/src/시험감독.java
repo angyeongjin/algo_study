@@ -1,0 +1,38 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class 시험감독 {
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int n = Integer.parseInt(br.readLine());
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int[] arr = new int[n];
+		for (int i = 0; i < n; i++) {
+			arr[i] = Integer.parseInt(st.nextToken());
+		}
+		st = new StringTokenizer(br.readLine());
+		int main = Integer.parseInt(st.nextToken());
+		int sub = Integer.parseInt(st.nextToken());
+		long cnt = 0;
+		
+		for (int i = 0; i < n; i++) {
+			int temp = arr[i];
+			temp -= main;
+			cnt++;
+			
+			if (temp > 0) {
+				if (temp%sub == 0) {
+					cnt += temp / sub;
+				} else {
+					cnt += temp / sub + 1;
+				}
+			} 
+		}
+		
+		System.out.println(cnt);
+	}
+}
+	

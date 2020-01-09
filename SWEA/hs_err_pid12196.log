@@ -1,0 +1,202 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (javaCalls.cpp:51), pid=12196, tid=0x000000000000283c
+#  guarantee(thread->is_Java_thread()) failed: crucial check - the VM thread cannot and must not escape to Java code
+#
+# JRE version: OpenJDK Runtime Environment (8.0_192-b01) (build 1.8.0_192-b01)
+# Java VM: OpenJDK 64-Bit Server VM (25.192-b01 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://www.azulsystems.com/support/
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000001e892800):  VMThread [stack: 0x000000001f910000,0x000000001fa10000] [id=10300]
+
+Stack: [0x000000001f910000,0x000000001fa10000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+VM_Operation (0x000000001ff9f120): GetOrSetLocal, mode: safepoint, requested by thread 0x000000001e92c000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000001ea63800 JavaThread "Service Thread" daemon [_thread_blocked, id=11172, stack(0x00000000205a0000,0x00000000206a0000)]
+  0x000000001ea36800 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=11768, stack(0x00000000204a0000,0x00000000205a0000)]
+  0x000000001ea2b800 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=11360, stack(0x00000000203a0000,0x00000000204a0000)]
+  0x000000001ea2a800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=6828, stack(0x00000000202a0000,0x00000000203a0000)]
+  0x000000001eaba800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=8032, stack(0x00000000201a0000,0x00000000202a0000)]
+  0x000000001e940800 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=5668, stack(0x00000000200a0000,0x00000000201a0000)]
+  0x000000001e939800 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=12256, stack(0x000000001ffa0000,0x00000000200a0000)]
+  0x000000001e92c000 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=11796, stack(0x000000001fea0000,0x000000001ffa0000)]
+  0x000000001e8c9000 JavaThread "Attach Listener" daemon [_thread_blocked, id=4292, stack(0x000000001fda0000,0x000000001fea0000)]
+  0x000000001e8c8800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2192, stack(0x000000001fca0000,0x000000001fda0000)]
+  0x000000000356c800 JavaThread "Finalizer" daemon [_thread_blocked, id=11844, stack(0x000000001fb10000,0x000000001fc10000)]
+  0x000000001e8b3000 JavaThread "Reference Handler" daemon [_thread_blocked, id=11188, stack(0x000000001fa10000,0x000000001fb10000)]
+  0x0000000003473000 JavaThread "main" [_thread_blocked, id=11628, stack(0x0000000003190000,0x0000000003290000)]
+
+Other Threads:
+=>0x000000001e892800 VMThread [stack: 0x000000001f910000,0x000000001fa10000] [id=10300]
+  0x000000001e9d7800 WatcherThread [stack: 0x00000000206a0000,0x00000000207a0000] [id=11568]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000000000318e6d0] Threads_lock - owner thread: 0x000000001e892800
+
+heap address: 0x00000006c1000000, size: 4080 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 76288K, used 7955K [0x000000076b000000, 0x0000000770500000, 0x00000007c0000000)
+  eden space 65536K, 12% used [0x000000076b000000,0x000000076b7c4c68,0x000000076f000000)
+  from space 10752K, 0% used [0x000000076fa80000,0x000000076fa80000,0x0000000770500000)
+  to   space 10752K, 0% used [0x000000076f000000,0x000000076f000000,0x000000076fa80000)
+ ParOldGen       total 175104K, used 0K [0x00000006c1000000, 0x00000006cbb00000, 0x000000076b000000)
+  object space 175104K, 0% used [0x00000006c1000000,0x00000006c1000000,0x00000006cbb00000)
+ Metaspace       used 4902K, capacity 4978K, committed 5248K, reserved 1056768K
+  class space    used 499K, capacity 529K, committed 640K, reserved 1048576K
+
+Card table byte_map: [0x0000000012930000,0x0000000013130000] byte_map_base: 0x000000000f328000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005a5ccf50
+ Begin Bits: [0x0000000014080000, 0x0000000018040000)
+ End Bits:   [0x0000000018040000, 0x000000001c000000)
+
+Polling page: 0x0000000000f50000
+
+CodeCache: size=245760Kb used=1354Kb max_used=1366Kb free=244405Kb
+ bounds [0x0000000003570000, 0x00000000037e0000, 0x0000000012570000]
+ total_blobs=396 nmethods=114 adapters=204
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 109.965 Thread 0x000000001ea36800  106       3       org.eclipse.jdt.launching.internal.org.objectweb.asm.SymbolTable::put (150 bytes)
+Event: 109.966 Thread 0x000000001ea36800 nmethod 106 0x00000000036be750 code [0x00000000036be900, 0x00000000036bf070]
+Event: 138.498 Thread 0x000000001ea2b800  112       4       java.lang.String::equals (81 bytes)
+Event: 138.498 Thread 0x000000001ea36800  111       3       org.eclipse.jdt.launching.internal.org.objectweb.asm.SymbolTable$Entry::<init> (17 bytes)
+Event: 138.498 Thread 0x000000001ea36800 nmethod 111 0x00000000036be350 code [0x00000000036be4c0, 0x00000000036be6a8]
+Event: 138.498 Thread 0x000000001ea36800  113       3       org.eclipse.jdt.launching.internal.org.objectweb.asm.ByteVector::putUTF8 (142 bytes)
+Event: 138.499 Thread 0x000000001ea36800 nmethod 113 0x00000000036c1110 code [0x00000000036c1300, 0x00000000036c1bb8]
+Event: 138.499 Thread 0x000000001ea36800  114       3       org.eclipse.jdt.launching.internal.org.objectweb.asm.SymbolTable::addConstantUtf8 (98 bytes)
+Event: 138.500 Thread 0x000000001ea36800 nmethod 114 0x00000000036c2110 code [0x00000000036c2300, 0x00000000036c2af8]
+Event: 138.501 Thread 0x000000001ea2b800 nmethod 112 0x00000000036c5e50 code [0x00000000036c5fa0, 0x00000000036c6298]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (3 events):
+Event: 103.862 Thread 0x000000001e892800 redefined class name=Ï†ïÏãùÏù¥ÏùòÏùÄÌñâÏóÖÎ¨¥, count=1
+Event: 109.964 Thread 0x000000001e892800 redefined class name=Ï†ïÏãùÏù¥ÏùòÏùÄÌñâÏóÖÎ¨¥, count=2
+Event: 138.499 Thread 0x000000001e892800 redefined class name=Ï†ïÏãùÏù¥ÏùòÏùÄÌñâÏóÖÎ¨¥, count=3
+
+Internal exceptions (2 events):
+Event: 0.018 Thread 0x0000000003473000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x000000076b007cb0) thrown at [C:\jenkins\workspace\zulu8-silver-build-win64\zulu-src\hotspot\src\sh
+Event: 0.018 Thread 0x0000000003473000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x000000076b007f98) thrown at [C:\jenkins\workspace\zulu8-silver-build-win64\zulu-src\hotspot\src\share\vm\prims\jni.c
+
+Events (10 events):
+Event: 146.806 Executing VM operation: GetCurrentContendedMonitor done
+Event: 146.806 Executing VM operation: GetOwnedMonitorInfo
+Event: 146.806 Executing VM operation: GetOwnedMonitorInfo done
+Event: 146.806 Executing VM operation: GetCurrentContendedMonitor
+Event: 146.806 Executing VM operation: GetCurrentContendedMonitor done
+Event: 146.808 Executing VM operation: GetCurrentContendedMonitor
+Event: 146.808 Executing VM operation: GetCurrentContendedMonitor done
+Event: 146.808 Executing VM operation: GetOwnedMonitorInfo
+Event: 146.808 Executing VM operation: GetOwnedMonitorInfo done
+Event: 146.885 Executing VM operation: GetOrSetLocal
+
+
+Dynamic libraries:
+0x00007ff73c390000 - 0x00007ff73c3c5000 	C:\Program Files\Zulu\zulu-8\bin\javaw.exe
+0x00007ff9b2780000 - 0x00007ff9b2961000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff9afd80000 - 0x00007ff9afe32000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff9aeb50000 - 0x00007ff9aedc3000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff9b0820000 - 0x00007ff9b08c1000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff9b1090000 - 0x00007ff9b112e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff9afcb0000 - 0x00007ff9afd0b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff9b06c0000 - 0x00007ff9b07e4000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff9b0bd0000 - 0x00007ff9b0d60000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff9af0f0000 - 0x00007ff9af110000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff9b0a90000 - 0x00007ff9b0ab8000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff9aee50000 - 0x00007ff9aefe2000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff9af980000 - 0x00007ff9afa1f000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff9aeff0000 - 0x00007ff9af0ea000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff9a5410000 - 0x00007ff9a5679000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.407_none_fb449d63306391e9\COMCTL32.dll
+0x00007ff9b0d60000 - 0x00007ff9b1082000 	C:\WINDOWS\System32\combase.dll
+0x00007ff9aedd0000 - 0x00007ff9aee4a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff9b07f0000 - 0x00007ff9b081d000 	C:\WINDOWS\System32\IMM32.DLL
+0x0000000059c40000 - 0x0000000059d12000 	C:\Program Files\Zulu\zulu-8\jre\bin\msvcr100.dll
+0x0000000059e00000 - 0x000000005a64a000 	C:\Program Files\Zulu\zulu-8\jre\bin\server\jvm.dll
+0x00007ff9b0ac0000 - 0x00007ff9b0ac8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff9aae10000 - 0x00007ff9aae19000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff9afd10000 - 0x00007ff9afd7c000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff9acd20000 - 0x00007ff9acd43000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff9a99d0000 - 0x00007ff9a99da000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff9acb20000 - 0x00007ff9acb4a000 	C:\WINDOWS\SYSTEM32\winmmbase.dll
+0x00007ff9af110000 - 0x00007ff9af159000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ff9a8d30000 - 0x00007ff9a8d3f000 	C:\Program Files\Zulu\zulu-8\jre\bin\verify.dll
+0x00007ff99d9d0000 - 0x00007ff99d9f9000 	C:\Program Files\Zulu\zulu-8\jre\bin\java.dll
+0x00007ff996a00000 - 0x00007ff996a35000 	C:\Program Files\Zulu\zulu-8\jre\bin\jdwp.dll
+0x00007ff9aa030000 - 0x00007ff9aa038000 	C:\Program Files\Zulu\zulu-8\jre\bin\npt.dll
+0x00007ff9a1e20000 - 0x00007ff9a1e43000 	C:\Program Files\Zulu\zulu-8\jre\bin\instrument.dll
+0x00007ff9a8d10000 - 0x00007ff9a8d26000 	C:\Program Files\Zulu\zulu-8\jre\bin\zip.dll
+0x00007ff9b12b0000 - 0x00007ff9b26ef000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ff9afef0000 - 0x00007ff9aff99000 	C:\WINDOWS\System32\shcore.dll
+0x00007ff9af160000 - 0x00007ff9af86d000 	C:\WINDOWS\System32\windows.storage.dll
+0x00007ff9b26f0000 - 0x00007ff9b2741000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ff9aeb10000 - 0x00007ff9aeb21000 	C:\WINDOWS\System32\kernel.appcore.dll
+0x00007ff9aeaa0000 - 0x00007ff9aeabf000 	C:\WINDOWS\System32\profapi.dll
+0x00007ff9aeac0000 - 0x00007ff9aeb0c000 	C:\WINDOWS\System32\powrprof.dll
+0x00007ff9aea90000 - 0x00007ff9aea9a000 	C:\WINDOWS\System32\FLTLIB.DLL
+0x00007ff9a1830000 - 0x00007ff9a1839000 	C:\Program Files\Zulu\zulu-8\jre\bin\dt_socket.dll
+0x00007ff99b770000 - 0x00007ff99b786000 	C:\WINDOWS\system32\napinsp.dll
+0x00007ff99b750000 - 0x00007ff99b76a000 	C:\WINDOWS\system32\pnrpnsp.dll
+0x00007ff9ab3c0000 - 0x00007ff9ab3d9000 	C:\WINDOWS\system32\NLAapi.dll
+0x00007ff9ae310000 - 0x00007ff9ae376000 	C:\WINDOWS\System32\mswsock.dll
+0x00007ff9ae0e0000 - 0x00007ff9ae19e000 	C:\WINDOWS\SYSTEM32\DNSAPI.dll
+0x00007ff9afe40000 - 0x00007ff9afe48000 	C:\WINDOWS\System32\NSI.dll
+0x00007ff9ae090000 - 0x00007ff9ae0c8000 	C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+0x00007ff99e2a0000 - 0x00007ff99e2ae000 	C:\WINDOWS\System32\winrnr.dll
+0x00007ff9a23a0000 - 0x00007ff9a2412000 	C:\WINDOWS\System32\fwpuclnt.dll
+0x00007ff9ae5f0000 - 0x00007ff9ae615000 	C:\WINDOWS\SYSTEM32\bcrypt.dll
+0x00007ff9a1c00000 - 0x00007ff9a1c0a000 	C:\Windows\System32\rasadhlp.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:51503 -javaagent:C:\ssafy\util\eclipse\configuration\org.eclipse.osgi\418\0\.cp\lib\javaagent-shaded.jar -Dfile.encoding=UTF-8 
+java_command: ¡§Ωƒ¿Ã¿«¿∫«‡æ˜π´
+java_class_path (initial): C:\Program Files\Zulu\zulu-8\jre\lib\resources.jar;C:\Program Files\Zulu\zulu-8\jre\lib\rt.jar;C:\Program Files\Zulu\zulu-8\jre\lib\jsse.jar;C:\Program Files\Zulu\zulu-8\jre\lib\jce.jar;C:\Program Files\Zulu\zulu-8\jre\lib\charsets.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\cldrdata.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\dnsns.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\jaccess.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\localedata.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\mysql-connector-java-8.0.15.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\nashorn.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\sunec.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\sunmscapi.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Zulu\zulu-8\jre\lib\ext\zipfs.jar;C:\Users\student\Downloads\ssafy\work_me\SWEA\bin;C:\ssafy\util\eclipse\configuration\org.eclipse.osgi\418\0\.cp\lib\javaagent-shaded.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files\Zulu\zulu-8\jre\bin;C:/Program Files/Zulu/zulu-8/bin/../jre/bin/server;C:/Program Files/Zulu/zulu-8/bin/../jre/bin;C:/Program Files/Zulu/zulu-8/bin/../jre/lib/amd64;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Zulu\zulu-8\bin\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:\Users\student\AppData\Local\Microsoft\WindowsApps;;C:\Users\student\AppData\Local\Programs\Microsoft VS Code\bin;C:\ssafy\util\eclipse;
+USERNAME=student
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 17134 (10.0.17134.1)
+
+CPU:total 12 (initial active 12) (6 cores per cpu, 2 threads per core) family 6 model 158 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16709632k(13129812k free), swap 19200000k(13908316k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.192-b01) for windows-amd64 JRE (1.8.0_192-b01), built on Oct 17 2018 09:53:48 by "tester" with MS VC++ 10.0 (VS2010)
+
+time: Thu Nov 14 09:20:46 2019
+timezone: ¥Î«—πŒ±π «•¡ÿΩ√
+elapsed time: 146 seconds (0d 0h 2m 26s)
+
