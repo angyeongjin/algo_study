@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07bbdf58-34fe-40cf-beed-7e2b6865d82f" name="Default Changelist" comment="" />
+    <list default="true" id="07bbdf58-34fe-40cf-beed-7e2b6865d82f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1W6Y2AhMVvZ0OInm0E2dpRo13o5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -17,7 +24,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/BOJ" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="ServiceViewManager">
@@ -45,7 +53,7 @@
       <workItem from="1578471696404" duration="84000" />
       <workItem from="1578471800674" duration="64000" />
       <workItem from="1578472213113" duration="616000" />
-      <workItem from="1578535849022" duration="635000" />
+      <workItem from="1578535849022" duration="1067000" />
     </task>
     <servers />
   </component>
@@ -53,10 +61,26 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1578472228606">
+    <state x="510" y="202" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578554288367">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1578472228606" />
+    <state x="510" y="202" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1578554288367" />
+    <state x="405" y="19" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1578554237242">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="405" y="19" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1536.824@0.0.1536.824" timestamp="1578554237242" />
+    <state x="610" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1578554145922">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="610" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1578554145922" />
+    <state x="511" y="246" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1578554296294">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="511" y="246" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1578554296294" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1578554429388">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1578554429388" />
     <state x="277" y="54" key="SettingsEditor" timestamp="1578471525675">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -65,5 +89,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="439" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1578471836829" />
+    <state x="180" y="0" key="new project wizard" timestamp="1578554417698">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="180" y="0" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1578554417698" />
   </component>
 </project>
