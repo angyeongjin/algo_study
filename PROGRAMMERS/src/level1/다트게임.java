@@ -1,4 +1,6 @@
-public class 다트_게임 {
+package level1;
+
+public class 다트게임 {
 
 	public static void main(String[] args) {
 		String dartResult = "1S*2T*3S";
