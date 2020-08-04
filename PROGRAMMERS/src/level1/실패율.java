@@ -1,9 +1,5 @@
 package level1;
 
-import javafx.stage.Stage;
-
-import java.awt.geom.Arc2D;
-import java.io.BufferedReader;
 import java.util.*;
 
 public class 실패율 {

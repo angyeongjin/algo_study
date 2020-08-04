@@ -1,3 +1,5 @@
+package level1;
+
 import java.util.Stack;
 
 public class 크레인인형뽑기게임 {

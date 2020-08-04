@@ -1,3 +1,5 @@
+package level2;
+
 import java.util.Arrays;
 
 public class 프렌즈4블록 {

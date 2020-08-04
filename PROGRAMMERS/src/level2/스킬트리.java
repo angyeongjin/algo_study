@@ -1,3 +1,4 @@
+package level2;
 
 public class 스킬트리 {
 
