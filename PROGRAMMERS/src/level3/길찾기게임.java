@@ -12,12 +12,7 @@ public class 길찾기게임 {
     }
 
     public static int[][] solution(int[][] nodeinfo) {
-        // 입력값을 y좌표순 정렬 -> x좌표순 정렬
-        // 그후 최상단 레벨부터 노드를 연결해 나감
-        // 현재 연결해야하는 노드에서 상위레벨 노드 검색
-        // 가장 가까이 있는 노드로 연결 (x좌표 가장 차이 적은것)
-        // 만약 이미 연결된 자식노드가 있다면, 다음 우선순위로 연결
-        // 간선 다 연결하면 순회해서 결과 출력 !
+        // 입력값을 y좌표순 정렬
         PriorityQueue<Node> nodes = new PriorityQueue<>();
         for (int i = 0; i < nodeinfo.length; i++) {
             nodes.offer(new Node(i+1, nodeinfo[i][1], nodeinfo[i][0]));
