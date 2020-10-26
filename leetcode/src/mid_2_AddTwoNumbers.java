@@ -1,6 +1,6 @@
 import java.math.BigInteger;
 
-class Solution {
+class mid_2_AddTwoNumbers {
 
     public static void main(String[] args) {
 
